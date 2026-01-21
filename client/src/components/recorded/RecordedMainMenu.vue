@@ -16,15 +16,6 @@
                     </v-list-item-content>
                 </v-list-item>
 
-                <v-list-item v-on:click="cleanup">
-                    <v-list-item-icon class="mr-3">
-                        <v-icon>mdi-delete</v-icon>
-                    </v-list-item-icon>
-                    <v-list-item-content>
-                        <v-list-item-title>クリーンアップ</v-list-item-title>
-                    </v-list-item-content>
-                </v-list-item>
-
                 <v-list-item v-on:click="upload">
                     <v-list-item-icon class="mr-3">
                         <v-icon>mdi-upload</v-icon>
@@ -49,10 +40,6 @@ export default class RecordedMainMenu extends Vue {
 
     public edit(): void {
         this.$emit('edit');
-    }
-
-    public cleanup(): void {
-        this.$emit('cleanup');
     }
 
     public async upload(): Promise<void> {
